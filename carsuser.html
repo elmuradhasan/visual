@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="salam" id="cars_users_select" onchange="savvaluetab(this)">
+
+    </select>
+<table border="1" cellspacing ="0">
+<thead id="table_h">
+
+</thead>
+<tbody id="table_b">
+
+</tbody>
+</table>
+
+    <script>
+        var choose= {
+       cars: [
+            {name:'bmw 512',color:'green',year:2018},
+            {name:'bmw f10',color:'white',year:2020},
+            {name:'bmw f30',color:'black',year:2017},
+        ],
+        users : [
+            {name:'Elmurad',surname:'hasanov',age:22},
+            {name:'murad',surname:'Huseynli',age:32},
+            {name:'Gunel',surname:'Babayev',age:19},
+        ],
+       computers : [
+            {type:'asus',memory:'1trb',ram:32},
+            {type:'HP',memory:'2trb',ram:16},
+            {type:'acer',memory:'1trb',ram:8},
+        ]
+    };
+ 
+    
+ 
+    var option = '';
+    var cars_users_select = document.querySelector("#cars_users_select");
+    option = `<option selected disabled>Secin</option>`
+        for (const item in choose) {
+        option += `<option value="${item}"> ${item} </option>`  
+        }
+        cars_users_select.innerHTML = option;
+        var table_h = document.querySelector("#table_h"); 
+        var table_b = document.querySelector("#table_b");
+        
+        var div = '';
+        
+        function savvaluetab(current) {
+            let tr= '';
+          for (const item in choose) {
+              const first = choose[item][0];
+              if (current.value == item) {
+                for (const key of choose[item]) {
+                    
+                    tr+="<tr>"
+                Object.values(key).forEach(ver => {
+                    
+                    tr+=`<td>${ver}</td>`
+                  });
+                  tr+="</tr>"
+                table_b.innerHTML = tr;               
+
+               
+                 
+                }
+                tr="<tr>"
+                Object.keys(first).forEach(bas => {
+                    tr+=`<th>${bas}</th>`
+                 console.log(bas)
+                    
+                });
+                tr+="</tr>"
+                table_h.innerHTML = tr;
+              }
+
+          }        
+    }
+     
+
+
+
+       </script>
+</body>
+</html>

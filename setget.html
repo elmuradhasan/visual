@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        set and get methods
+    </title>
+</head>
+<body>
+    <script>
+// const person = {
+//     firstname: 'Elmurad',
+//     lastname:'Hasanov',
+//         get fullname() {
+//             return `${this.firstname} ${this.lastname}`
+//         },
+//         set fullname(value){
+//       const parts = value.split(' ');
+//       this.firstname = parts[0];
+//       this.lastname = parts[1];
+//         }
+// }
+// person.fullname = 'Mirseyid Babayev';
+// console.log(person.fullname);
+// reset operatoru
+
+/*
+var result = 0;
+var sum  = function(...arr){
+arr.forEach(function (item) {
+    result +=item;
+    
+})
+console.log(result);
+}
+sum(20,47,65,87);
+*/
+/*
+var numbers = [234,5,14];
+
+function hesabla(a,b,c) {
+    return a+b+c;
+    
+}
+console.log(hesabla(...numbers));
+*/
+
+class PersonES6 {
+    constructor(name,surname,yearofbirth){
+        this.name =name;
+        this.surname = surname;
+        this.yearofbirth =yearofbirth;
+    }
+    calculateage (){
+        return 2021 -this.yearofbirth;
+
+    }
+}
+
+/*
+class CustomerES6 extends PersonES6{
+    constructor(name,surname,yearofbirth,color,tel){
+        super(name,surname);
+        this.color =color;
+        this.tel = tel;
+    }
+}
+var samir = new CustomerES6('volkan','Musayev',2002,'green','0513425435')
+         console.log(samir);
+
+
+      
+
+
+var PersonES5 = function (name,surname,yearofbirth) {
+    this.name = name;
+    this.surname =surname;
+    this.yearofbirth = yearofbirth;
+
+}
+
+PersonES5.prototype.calculateage = function () {
+    return 2021 - this.yearofbirth;
+}
+
+var murad = new PersonES5('Elmurad','Hasanov',1999);
+console.log(murad);
+*/
+
+
+
+    </script>
+</body>
+</html>

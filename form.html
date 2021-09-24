@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form name='register_form'>
+   AD: <input type="text" name="ad"  value="" onkeyup="saveinput(this)"><br>
+   SOYAD:<input type="text" name="soyad" value=""  onkeyup="saveinput(this)"><br>
+   <button type="submit">save</button>
+   </form>
+        
+  
+    <script>
+        var s_storage = window.sessionStorage;
+        var input_data = (s_storage.getItem('input_data')) ? JSON.parse(s_storage.getItem('input_data')) :{}; 
+function saveinput(current_input) {
+    var data_name = current_input.getAttribute('name');
+    var data_value = current_input.value;
+        input_data[data_name] = data_value;
+        s_storage.setItem('input_data',JSON.stringify(input_data));
+}
+ fillinput = () =>{
+     var register_form  = document.forms.register_form;
+    if (Object.keys(input_data).length > 0) {
+        for (const key in input_data ) {
+            register_form[key].value  = input_data[key]
+            console.log(input_data[key])
+        }    
+    }
+ }
+ fillinput();
+
+
+   
+
+    </script>
+</body>
+</html>

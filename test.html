@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES 6 la gelen ozellikler</title>
+    <style>
+        body{
+            display: flex;
+         
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+                }
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+/* .boyuk{
+    width: 200px;
+height: 200px;
+} */
+    </style>
+</head>
+<body>
+    <!-- <div class="blue" id="block1">I am blue</div>
+    <div class="yellow" id="block2">I am yellow</div>
+    <div class="red" id="block3">I am red</div> -->
+
+<script>
+    /*
+    var divs = document.querySelectorAll('div');
+ let boxeses5 = Array.prototype.slice.call(divs);
+  boxeses5.forEach(element => {
+      
+      element.style.backgroundColor = 'green';
+  });
+var divses6 = Array.from(divs);
+for (let item of divses6) {
+  if (item.classList.contains('blue')) {
+        continue;      
+  }
+  else{
+      item.classList.add('boyuk');
+      console.log(item);
+  }
+}
+*/
+
+// var ad  = Array.from('Elmurad Qasanov');
+// ad.forEach((herf) => {
+// document.write(herf);
+// });
+
+/*
+const mehsul =[
+    {name:'samsung s8',price:2000},
+    {name:'samsung s7',price:1400},
+    {name:'samsung s6',price:1000},
+    {name:'samsung s6',price:1000},
+    {name:'samsung s8',price:2000},
+    {name:'samsung s7',price:1400},
+];
+
+console.log(Array.from(mehsul,prd => prd.price == '1000'));
+console.log(mehsul.find(prd => prd.name == 'samsung s7'));
+console.log(mehsul.filter(prd => prd.name == 'samsung s6'));
+console.log(mehsul.findIndex(prd => prd.name == 'samsung s7'));
+*/
+// entries methodu
+/*
+var numbers = ['a','b','c'];
+let entries = numbers.entries();
+for (const item of  entries) {
+    console.log(item);  
+}
+let keys = numbers.keys();
+for (const key of  keys) {
+    console.log(key);  
+}
+let values = numbers.values();
+for (const value of  values) {
+    console.log(value);  
+}
+*/
+/*
+const mehsul =[
+    {name:'samsung s8',price:2000},
+    {name:'samsung s7',price:1400},
+    {name:'samsung s6',price:1000},
+    {name:'samsung s6',price:1000},
+    {name:'samsung s8',price:2000},
+    {name:'samsung s7',price:1400},
+];
+
+for (const item of mehsul) {
+    for (const key in item) {
+console.log(key);
+}
+}
+*/
+// js de class anlayisi
+/*
+ class Person{
+constructor(name,surname,yearofbirth){
+this.name = name;
+this.surname = surname;
+this.yearofbirth = yearofbirth;
+
+}
+
+yashesabla(){
+    return 2021 - this.yearofbirth;
+}
+
+}
+let Elmurad = new Person('Elmurad','Qasanov','1999');
+console.log(Elmurad.name);
+console.log(Elmurad.surname);
+console.log(Elmurad.yashesabla());
+
+
+
+var Person1 = function (name,surname,yearofbirth) {
+    this.name =name;
+    this.surname =surname;
+    this.yearofbirth = yearofbirth;
+
+    
+}
+Person1.prototype.yashesabla = function () {
+    return 2021 - this.yearofbirth;
+
+}
+var sayid =  new Person1('sayid','babayev','1993');
+console.log(sayid.name);
+console.log(sayid.surname);
+console.log(sayid.yashesabla());
+*/
+/*
+var PersonES5 = function (ad,soyad,yas) {
+    this.ad = ad;
+    this.soyad =soyad;
+    this.yas =yas;
+}
+PersonES5.prototype.salamde = function () {
+   return `hello I am ${this.ad} ${this.soyad}`
+}
+// class CustomerES6 extends PersonES6
+function CustomerES5(ad,soyad,yas,username,elaqe) {
+   PersonES5.call(this,ad,soyad,yas);
+   // ES6 da super(ad,soyad)
+   this.username = username;
+   this.elaqe = elaqe;
+}
+
+CustomerES5.prototype = Object.create(PersonES5.prototype);
+
+
+var customer = new CustomerES5('elmurad','hasanov',22,'elhasano','0514464442')
+console.log(customer);
+console.log(customer.salamde());
+*/
+/*
+class Person{
+    constructor(name,surname,yearofbirth){
+        this.name = name;
+        this.surname = surname;
+        this.yearofbirth = yearofbirth;
+    }
+    yashesabla(){
+    return 2021 - this.yearofbirth;
+}
+}
+
+
+
+class Customer extends Person {
+    constructor(name,surname,yearofbirth,phone){
+    super(name,surname,yearofbirth,phone);
+    this.phone = phone;
+    
+}
+static salamde (){
+    return 1000;
+}
+
+}
+
+var murad = new Customer('elmurad','qasanli','1984','0514464442');
+console.log(murad);
+console.log(murad.phone);
+console.log(murad.yashesabla());
+console.log(Customer.salamde());
+*/
+function question(hobby) {
+switch (hobby) {
+    case 'car':
+    return function (name) {
+        console.log('hello '+name+' do you have a car?');
+    }   
+    break;
+      case 'book':
+    return function (name) {
+        console.log( name+ ' do you like read book ? ');
+    } 
+    break;
+    case 'software':
+    return function (name) {
+        console.log(name+ ' do you interested in angular and javascript?');
+    } 
+ break;
+
+    default: 
+    return function () {
+        console.log('i dont understood you');
+    }
+
+
+        break;
+}
+}
+var sual1 = question('software');
+   sual1('Elmurad');
+
+
+
+// kod çalıştığında  Reference error hatası verecektir.
+
+</script>
+
+</body>
+</html>

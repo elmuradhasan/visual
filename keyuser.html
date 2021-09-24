@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="name_id" onkeyup="savevalue(this)">
+    </form>
+<table border="1" cellspacing ="0">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>surname</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody id="users_info">
+
+    </tbody>
+    <p id="demo"></p>
+</table>
+    <script>
+                var users = [
+            {name:'elmurad',surname:'Hasanov',age:22},
+            {name:'murad',surname:'Huseynli',age:32},
+            {name:'Gunel',surname:'Babayev',age:19},
+            {name:'Fidan',surname:'Ferzaliyeva',age:20},
+             {name:'Amil',surname:'Aliyev',age:20},
+             {name:'Amin',surname:'Aliyev',age:20},
+             
+        ];
+var  p = document.querySelector("#demo");
+function savevalue(current){
+
+    var tr = '';
+ var users_info = document.querySelector("#users_info");
+    
+ let filter_users = users.filter(row=>{
+        return  row.name.includes(current.value);
+    });
+
+    filter_users.forEach(user => {
+
+                   tr+=`<tr>`
+                   tr+=`<td>${user.name}</td>`
+                   tr+=`<td>${user.surname}</td>`
+                   tr+=`<td>${user.age}</td>`
+                   tr+=`</tr>`
+               users_info.innerHTML = tr;
+           
+});
+};
+
+    </script>
+</body>
+</html>

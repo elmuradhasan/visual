@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+.list_s{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 400px;
+}
+.list_s li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+.list_s li a{
+    text-decoration: none;
+    text-align: center;
+    color:blue;
+    width: 100%;
+    display: inline-block;
+    padding: 4px;
+    color: black;
+
+}
+span{
+    display: none;
+}
+.active{
+    display: block;
+}
+
+ </style>
+</head>
+<body>
+<ul id="list" class="list_s">
+
+</ul>
+
+    <script>
+        faq_list = [
+          {question:'nece yasiniz var?',answer:'22'}, 
+          {question:'derslerde nece defe istirak etdiz?',answer:'3'},
+          {question:'harada tehsil almisiz?',answer:'Bdu'},
+          {question:'Sifaris nece gune gelir?',answer:'19'},
+          {question:'Getirilen mallar nece gun erzinde qaytarila biler?',answer:'30gun'},
+          {question:'catdirilma varmi?',answer:'Beli sirketimiz terefinden catdirlima var'}
+        ];
+   var li = '';
+      var list = document.querySelector("#list");    
+      faq_list.forEach(item => {
+          li+=`<li class="list_i">
+            <a href="#" class="link" onclick="show(this)">${item.question}</a>
+            <span>${item.answer}</span> 
+            </li>`
+      
+      });
+    list.innerHTML = li;
+function show(link) {
+   if(link.parentElement.children[1].classList.contains('active')){
+    link.parentElement.children[1].classList.remove('active');
+    
+}else{
+    link.parentElement.children[1].classList.add('active');
+  
+}
+}
+
+    </script>
+</body>
+</html>

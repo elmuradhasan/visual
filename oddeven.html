@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        /*
+        var cutsay = 0,
+        teksay = 0;
+  for (let i = 1; i <= 243; i++) {
+if (i % 2 == 0) {
+   cutsay = cutsay + 1;
+}
+else{
+teksay++;
+   }
+  }     
+console.log('cut ededlerin say'+cutsay,'tek ededlerin sayi'+teksay);
+
+*/
+/*
+var p =document.querySelector("#demo");
+for (let i = 1; i <=10; i++) {
+for (let n = 1; n <=10 ; n++) {
+    document.write(i+'*'+n+'='+i*n+'<br>');    
+}
+document.write('<hr>')
+}
+*/
+
+// var numbers = ['a','b','c'];
+// let entries = numbers.entries();
+// let keys = numbers.keys();
+// let values = numbers.values();
+// for (const i of values) {
+//     console.log(i);
+//       };
+
+
+// var a,b,rest;
+// [a,b,...rest] = [2,3,45,12,2,43]
+
+// console.log(a);
+// console.log(rest);
+
+// var bir = new Map([
+//     [1,'one'],
+//     [2,'two'],
+//     [3,'three'],
+// ]);
+// var iki = new Map([
+//     [4,'four'],
+//     [5,'five'],
+// ]);
+// var uc  = new Map([
+//     [6,'six']
+// ]);
+
+// var merged =new Map([...bir,...iki,...uc]); 
+// console.log(merged);
+//  var myset = new Set();
+
+//  myset.add('5');
+//  myset.add('6');
+//  myset.add(3);
+//  myset.add(4);
+
+// for (const item of myset.values()) {
+//     console.log(item)
+// }
+
+// var myset2 = new Set(['5','6','7']);
+// var intersect = new Set([...myset].filter(x => !myset2.has(x)));
+// console.log(intersect);
+
+
+
+// objectin icersinde yeni element yaratma imkani ve onu deyismenin mumkunluyu;
+// const person = {
+//     name:'elmurad',
+//     surname:'hasanov'
+// }
+// Object.defineProperty(person,'age',{
+//     value:50,
+//   writable:true
+// });
+
+// Object.defineProperty(person,'email',{
+//     value:'test@go.az',
+//   writable:true
+// });
+
+
+// person.age = 55;
+// console.log(person);
+var users = [
+    {name:'elmurad',surname:'hasanov'},
+    {name:'gunay',surname:'quluyeva'},
+    {name:'fidan',surname:'aliyeva'},
+]
+let added =true;
+function addelment(user,callback) {
+    if (added) {
+        setTimeout(() => {
+     users.push(user);
+     callback(null,user);
+ }, 2000);  
+    }
+    else{
+     callback('500',user)
+    } 
+}
+
+
+function getelement() {
+    setTimeout(() => {
+       users.forEach(element => {
+           console.log(element);
+       }); 
+    }, 1000);
+}
+
+  addelment({name:'samil',surname:'huseynov'}, function (error,data) {
+      if (error) {
+         console.log('hata '+error) 
+      }
+      else{
+        console.log(data);
+      }
+  });
+ 
+
+
+
+    </script>
+</body>
+</html>

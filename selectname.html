@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select name and show</title>
+</head>
+<style>
+    #user_tab{
+        margin-top:40px;
+        display: none; 
+    }
+</style>
+<body>
+    <select name="" id="select_user"></select>
+    <table border="1" cellpadding="5" id="user_tab" cellspacing='0'>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>surname</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody id="table_b">
+
+        </tbody>
+    </table>
+    <script>
+        var users = [
+            {name:'Elmurad',surname:'Hasanov',age:22},
+            {name:'murad',surname:'Huseynli',age:32},
+            {name:'Gunel',surname:'Babayev',age:19},
+            {name:'Fidan',surname:'Ferzaliyeva',age:20},
+        ];
+
+var select_user = document.querySelector("#select_user");
+   options = `<option value="" selected>Secin</option>`
+     users.forEach( (row,index) => {
+    options += `<option  value="${index}">${row.name}</option>`
+    select_user.innerHTML = options;
+
+});
+var user_tab = document.querySelector("#user_tab");
+select_user.addEventListener('change', (e)=>{
+ let value =parseInt( e.target.value);
+if (!isNaN(value)) {
+    showdata(value);
+}
+user_tab.style.display = (!isNaN(value)? 'table' : 'none');
+
+});
+
+function showdata(index) {
+    var table_b  = document.querySelector("#table_b");
+    var tr = '';
+    var selected_name = users[index];
+    tr += `<tr align="center">`
+        tr+=`<td>1</td>`
+  for (const key in selected_name ) {
+     tr+=`<td>${selected_name[key]}</td>`
+  }
+  table_b.innerHTML = tr;
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>

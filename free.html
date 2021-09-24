@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        li a{
+            text-decoration: none;
+        }
+        .textcolor{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+<!-- <ul id="list">
+    <li class="textcolor"><a href="#">home</a></li> 
+    <li><a href="#">about</a></li>     
+    <li><a href="#">news</a></li>    
+    <li><a href="#">contact</a></li>
+</ul> -->
+    <script>
+        /*
+        var numbers= new Map();
+         numbers.set('key','value');
+        numbers.set('1','one');
+        numbers.set(2,'iki');
+       
+for (let [key,value] of numbers) {
+console.log(key,value);
+    
+}
+*/
+/*
+var list = document.querySelector('#list');
+
+
+var li = document.createElement('li');
+var a = document.createElement('a');
+li.classList.add('textcolor');
+var text = document.createTextNode('salam ilk list');
+a.appendChild(text);
+li.appendChild(a);
+list.appendChild(li);
+
+var d = list.childNodes[0].nodeName;
+
+console.log(d);
+
+*/
+//  callback funksiyalar a aid numune
+
+// function salam(a,b,c,callback) {
+//         var arr = [];
+//         for (let i = 0; i < 3; i++) {
+//         arr[i] = callback(arguments[i] *3); 
+//         }
+    
+//      return arr;
+//      }
+// console.log(salam(4,23,65,addtwo));
+
+//    function addone(a) {
+//     return a + 12;
+//      }
+//      function addtwo(a) {
+//     return a + 2;
+//      }
+     
+    // call,apply,bind methodlari
+     /*
+ var welcome = function (a,b) {
+         console.log('Welcome '+this.name + ' are you interested in '+a+ ' and '+b+"?");
+     }
+
+var murad =
+ {
+     name:'Elmurad'
+};
+var elnure =
+ {
+     name:'Elnure'
+};
+var fidan=
+ {
+     name:'Fidan'
+};
+
+welcome.call(murad,'c#','angular'); //sade sekilde vergulle yaza bilirik
+welcome.apply(elnure,['react','phyton']);  // massiv seklind e vermeliyik
+
+var bindfidan= welcome.bind(fidan); // bund geriye bir function gonderir
+bindfidan('book read','walk night');
+*/
+
+// function Question(text,choices,answer) {
+//     this.text = text;
+//     this.choices =choices;
+//     this.answer = answer;
+// }
+
+// Question.prototype.checkanswer = function (answer) {
+//     return this.answer === answer;
+// }
+
+// var q1 = new Question('what is the best programing language?',["c#","javascript","C++","pyhton"],'javascript')
+// var q2 = new Question('what is the very use programing language?',["c#","javascript","C++","pyhton"],'c#')
+// var q3 = new Question('what is"not the best programing language?',["c#","javascript","C++","pyhton"],'pyhton')
+//  var questions = ['q1','q2','q3'];
+//   console.log(q1.checkanswer('javascript'))
+
+
+    </script>
+</body>
+</html>

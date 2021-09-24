@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello error</title>
+</head>
+<style>
+form{
+    border:1px solid black;
+    padding: 20px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+</style>
+<body>
+    <!-- <form>
+        ad: <input type="text" id="name" /><br>
+        yas: <input type="text" id="age" /><br>
+       <input type="submit" id="button" /><br>
+       <div id="error"></div>      
+    </form> 
+
+    <input type="color" id="color" oninput="changebgcolor(this)">
+-->
+
+
+
+<script>
+/*
+    var murad = {
+        name:'Elmurad'
+    };
+ 
+    try {
+        // console.log(myfunction()); 
+        console.log(murad.name);  
+        if (!murad.email) {
+            throw new Error('users dont enter email address');
+        }
+} catch (e) {
+        console.log(e);
+        console.log(e.message);
+        console.log(e.name);
+        console.log(e instanceof ReferenceError);
+        console.log(e instanceof TypeError);
+        console.log(e instanceof SyntaxError);
+        console.log(typeof e);
+
+    }
+    finally{
+        console.log('herzaman isleyer catcth islese de islemese de')
+    }
+
+    */
+   /*
+ var button  = document.querySelector("#button");
+ button.addEventListener('click',function (e) {
+    var ad = document.querySelector("#name");
+var yas = document.querySelector("#age");
+ var error  = document.querySelector("#error");
+ error.innerHTML =' ';
+ try {
+    if (ad.value.length === 0) {
+    throw new Error('Name is required');
+}
+if (ad.value.length >= 10) {
+    throw new Error('Name is a long');
+}
+if (yas.value <= 0) {
+    throw new Error('you enter wrong age');
+}
+
+if (isNaN(yas.value) ) {
+    throw new Error('please enter number type');
+}
+     
+ } catch (err) {
+     error.innerHTML = err;
+ }
+ finally{
+     ad.value = ' ';
+     yas.value = ' ';
+ }
+
+e.preventDefault();
+
+ });
+    */
+   /*
+        var reng = document.querySelector('#color');
+        function changebgcolor(e) {
+    document.querySelector('body').style.backgroundColor =e.value;
+    reng.value = e.value;
+}
+*/
+
+//  immediate functions 
+
+( function (name)  {
+var today = new Date();
+var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+var msg = "Welcome " +name+",Today is "+days[today.getDay()];
+console.log(msg);
+}('Elmurad'));
+
+
+function welcome1(ad) {
+var todays = new Date();
+var day = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+var mesaj = "welcome "+ad+" today is "+ day[todays.getDay()];
+ // return mesaj;
+console.log(mesaj);
+}
+// console.log(welcome1('fidan'))
+welcome1('Fidan');
+
+
+</script>
+</body>
+</html>

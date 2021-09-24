@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo" style="color:green"></p>
+    <form>
+        <h2>Please enter you password</h2>
+        <input type="password" name="sifre" id="pass">
+        <button id="button">click me</button>
+        
+    </form>
+
+<script>
+//     var pass = document.querySelector('#pass');
+//     pass.addEventListener('paste',function (e) {
+        
+// e.preventDefault();
+      
+//     });
+
+
+//     var pass = document.querySelector('#pass');
+//     pass.addEventListener('cut',function (e) {
+        
+//  e.preventDefault();
+      
+//     });
+var parol = 12341;
+    var pass = document.querySelector('#pass');
+    var paragraph = document.querySelector('#demo');
+    pass.addEventListener('keyup',function (e) {
+        var deyer = e.target.value;
+if (deyer == parol) {
+    paragraph.innerHTML = ' password true : welcome to profile';
+
+}
+else{
+    paragraph.innerHTML = 'password is a wrong';
+
+}
+ 
+    });
+
+    button.addEventListener('click',function (e) {
+  
+  if ( pass.getAttribute('type') == 'password') {
+      pass.setAttribute('type','text');
+      button.innerHTML = 'hide';
+  }
+  else{
+      pass.setAttribute('type','password');
+      button.innerHTML = 'show';
+  }
+  e.preventDefault();
+  });
+
+  pass.addEventListener('paste', function (p) {
+      p.preventDefault();
+  });
+  
+
+</script>
+
+
+</body>
+</html>

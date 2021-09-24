@@ -1,0 +1,18 @@
+[{ 
+       "firstname" : "Zərxanım", 
+       "lastname" : "Hasanova", 
+       "age": 23    
+},
+{ 
+    "firstname" : "Elmurad", 
+    "lastname" : "Hasanov", 
+    "age": 22    
+},
+
+{ 
+    "firstname" : "Mirseyid", 
+    "lastname" : "Babayev", 
+    "age": 28    
+}
+
+]

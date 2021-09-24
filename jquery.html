@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salam jquery methodlari</title>
+</head>
+<style>
+
+</style>
+<body>
+    <p id="demo">Lorem ipsum dolor sit amet
+         consectetur adipisicing elit. Quas suscipit fugit 
+         aliquam non magni ab debitis, facere quo magnam, 
+        hic quidem omnis quia quaerat itaque numquam vitae. Quos,
+         quaerat eveniet!</p>
+
+
+    <button id="hide" type="button">hide</button>
+    <button id="show" type="button">show</button>
+    <script>
+     $(document).ready(function () {
+           $('#hide').click(function () {
+           $('#demo').hide();
+             });
+         $('#show').click(function () {
+            $('#demo').show(speed,callbackfunksiyasi); 
+            // effekt verir yeni 2saniye icersinde gosterir
+         });
+       });
+
+
+
+
+    </script>
+    
+</body>
+</html>

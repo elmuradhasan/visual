@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set array in object sessionstorage</title>
+</head>
+<body>
+   
+    <table border="1">
+<thead id="title">
+
+</thead>
+
+<tbody id="tabbody">
+
+</tbody>
+
+    </table>
+
+
+
+
+<script>
+/* sessionstorage a objectin daxil edilmesisinin 1ci yolu
+   var session = window.sessionStorage;
+    function setstorage(data=[]) {
+         for(let item of data){
+       for(let key in item){
+           session.setItem(key,item[key])
+                            }
+          }
+    }
+
+*/
+/*
+var session = window.sessionStorage;
+    function setstorage(data=[]) {
+         for(let item of data){
+
+session.setItem(Object.keys(item)[0],Object.values(item)[0]);
+
+
+    }
+    }
+    setstorage([
+
+{name:'elmurad'},
+{age:'19'},
+{color:'black'},
+{skincolor:'red'}
+
+    ]);
+    */
+
+
+   
+var telebe  = [
+{name:'elmurad',surname:'hasanov',age:'22',email:'test@gov.az'},
+{name:'murad',surname:'quluyev',age:'33',email:'test@gov.az'},
+{name:'sabir',surname:'eliyev',age:'11',email:'test@gov.az'},
+{name:'nurgul',surname:'hadiyeva',age:'72',email:'test@gov.az'},
+{name:'semra',surname:'hasanova',age:'24',email:'test@gov.az'}
+
+];
+
+//  var basliq = document.querySelector('#title');
+//  var govde = document.querySelector('#tabbody');
+//  var tr = ' ',
+// th = ' ',
+// td = ' ';
+ 
+// function tablefill(massiv =[]) {
+//     for (let item of massiv) {
+//    for (const key in item) {
+//     tr+=`<tr>`;
+//     th+=`<th>${key}</th>`
+//     tr+=`</tr>`
+//    basliq.innerHTML = th;
+//    tr+=`<tr>`;
+//     td+=`<td>${item[key]}</td>`
+//     tr+=`</tr>`
+//    govde.innerHTML = td;
+//    }
+    
+
+//   }
+   
+//  }
+
+//  tablefill(telebe);
+
+
+
+var ilk = telebe[0];
+var tr = '',
+th = '',
+td = '';
+var basliq = document.querySelector('#title');
+
+function cedveldoldur(array) {
+ for(let key in array){
+     tr+=`<tr>`;
+    th+=`<th>${key}</th>`
+    tr+=`</tr>`
+  
+ }
+  basliq.innerHTML = th;
+
+}
+
+cedveldoldur(ilk); 
+
+var govde= document.querySelector('#tabbody');
+function setrdoldur(massiv) {
+
+     for (let item of massiv) {
+  
+      tr+=`<tr>`;
+     tr+=`<td>${item.name}</td>`
+     tr+=`<td>${item.surname}</td>`
+     tr+=`<td>${item.age}</td>`
+     tr+=`<td>${item.email}</td>`
+     tr+=`</tr>`
+   govde.innerHTML = tr;  
+ }
+}
+setrdoldur(telebe);
+ 
+</script>
+
+</body>
+</html>

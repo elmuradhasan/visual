@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first javascript apps in sadik turan course</title>
+<style>
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    width: 100%;
+    height: auto;
+    padding: 4px;
+    border: 2px solid black;
+ 
+}
+input{
+ 
+    margin: 4px;
+    width: 100%;
+}
+button{
+    background-color: blue;
+    border: none;
+    padding: 6px;
+    color: white;
+    border-radius: 4px;
+}
+
+table{
+    border:1px solid black;
+  width: 100%;
+    margin-top: 20px;
+}
+
+.borr{
+    width: 100%;
+    color:green;
+    border:1px solid black;
+    margin-bottom: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+      <h2 id="demo">Course app</h2>
+    <form id="sign">
+        <label for="iscourse">course title </label>  
+         <input type="text" name="course" id="iscourse">
+       
+        <label for="isname">instructor</label>  
+            <input type="text" name="ad" id="isname">
+           
+           <label for="image">image</label>  
+            <input type="text" name="image" id="image">
+           
+           <button type="submit" id="button">save</button>
+    </form>
+</div>
+<table border="1">
+    <thead>
+        <tr>
+            <th>image</th>
+            <th>title</th>
+            <th>instructor</th>
+            <th>operation</th>
+        </tr>
+    </thead>
+<tbody id="govde">
+
+
+
+</tbody>
+</table>
+
+<script src="appjsES6.js"></script>
+
+
+
+
+</body>
+</html>

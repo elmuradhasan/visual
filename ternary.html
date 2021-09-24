@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .point{
+        animation: turnon 1s;
+        opacity: 1;
+    }
+
+@keyframes turnon {
+    0%{
+opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+</style>
+<body>
+    <p id="demo"></p>
+    <script>
+
+
+function hourmake() {
+    var saat = new Date().getHours();
+        var deqiqe = new Date().getMinutes();
+        var saniye = new Date().getSeconds();
+
+        saat =((saat < 10) ? '0'+saat : saat);
+        deqiqe =((deqiqe < 10) ? '0'+deqiqe : deqiqe);
+         saniye =((saniye < 10) ? '0'+saniye : saniye);
+         var make = `${saat}<span class='point'>:</span>
+         ${deqiqe}<span class='point'>:</span>${saniye}`;
+        
+       document.querySelector('#demo').innerHTML = `${make}`;
+
+}
+hourmake();
+
+
+setInterval(() => {
+   hourmake();
+}, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

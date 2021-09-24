@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salam front end</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- tapsiriq 1 -->
+    <!-- <button id="front" >default</button>
+      <p id="back" >salam front end</p> -->
+<p id="demo"></p>
+     <input type="checkbox" name="reng"  value="1" onchange="deyis(this)">
+      <input type="checkbox" name="reng" value="2" onchange="deyis(this)">    
+      <input type="checkbox" name="reng" value="3" onchange="deyis(this)">
+      <input type="checkbox" name="reng" value="4" onchange="deyis(this)">
+      <input type="checkbox" name="reng" value="5" onchange="deyis(this)">
+      <input type="checkbox" name="reng" value="6" onchange="deyis(this)">
+      <input type="checkbox" name="reng" value="7" onchange="deyis(this)"> 
+       <!--
+<form class="myform" name="register_form">
+   ad:<input type="text" name="ad" onkeyup="avtosave(this)" class="avtosave"  /><br>
+   soyad:<input type="text" name="soyad" onkeyup="avtosave(this)"  class="avtosave" /><br>
+
+   <button type="submit">send</button>
+</form>
+-->
+
+   <script>
+   // tapsiriq 1
+//  var button   = document.querySelector('#front');
+//  var p = document.querySelector('#back');
+// button.addEventListener('click',function () {
+//     if (p.style.display == 'none') {
+//         p.style.display = 'block';
+//         button.innerHTML = 'hide';
+//     } 
+//      else{
+//         p.style.display = 'none';
+//         button.innerHTML = 'show';
+
+//      }
+//  });
+var p = document.querySelector("#demo")
+var array = new Set();
+var say = 0;
+function deyis(params) {
+say += (params.checked) ? +1 : -1;
+
+      if (params.checked) {
+         array.add(params.value);
+      }
+   let son = Array.from(array);
+ p.innerHTML = son;
+      activeor(); 
+}
+
+
+function activeor() {
+var input = document.querySelectorAll("input[type=checkbox]");
+
+input.forEach(element => {
+   element.disabled = (say>=4 && !element.checked) ? true :false
+});
+}
+
+/* 
+var session = window.sessionStorage;
+const input_data  = (session.getItem('input_data')) ? JSON.parse(session.getItem('input_data')) : {};
+    avtosave = (current_input) =>{
+    let data_name = current_input.getAttribute('name');
+     let data_value = current_input.value;
+     // object icerisinde yeni 
+        input_data[data_name]=data_value;
+
+   session.setItem('input_data',JSON.stringify(input_data));
+
+   }
+inputdoldur = () => {
+ 
+   if (Object.keys(input_data).length > 0 ) {
+      var register_form = document.forms.register_form;
+      for (let key in input_data) {
+        register_form[key].value = input_data[key];
+      }
+   } 
+
+}
+inputdoldur();
+*/ 
+
+
+
+
+
+
+
+
+   </script> 
+
+</body>
+</html>
